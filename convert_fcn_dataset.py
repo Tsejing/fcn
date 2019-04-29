@@ -55,7 +55,7 @@ def dict_to_tf_example(data, label):
     feature_dict = {
         'image/height': dataset_util.int64_feature(height),
         'image/width': dataset_util.int64_feature(width),
-        'image/filename': dataset_util.bytes_feature(data['filename'].encode('utf8')),
+        'image/filename': dataset_util.bytes_feature(data.encode('utf8')),
         'image/encoded': dataset_util.bytes_feature(encoded_data),
         'image/label': dataset_util.bytes_feature(encoded_label),
         'image/format': dataset_util.bytes_feature('jpeg'.encode('utf8')),
@@ -70,6 +70,8 @@ def create_tf_record(output_filename, file_pars):
     for x,y in file_pars:
         try:
             tf_example = dict_to_tf_example(x,y)
+            if tf_example is None:
+                continue
             writer.write(tf_example.SerializeToString())
         except ValueError:
             logging.warning('Invalid example: file_pars, ignoring.')
