@@ -10,3 +10,5 @@ voc dataset,semantic segmentation
 总结近年实例分割和语义分割的进展及各个方案的思考，语言简洁精炼，读者能有很大收获！
 ###  模型tinymind地址
 https://www.tinymind.com/qq-25646217/fcn8s/code 欢迎复制模型进行测试
+###    更早一些的项目
+如densenet复现，minist卷积神经网络，cnn前向网络练习等等在本人码云地址https://gitee.com/JueDiDaTaoSha
