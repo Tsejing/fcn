@@ -8,3 +8,5 @@ voc dataset,semantic segmentation
 下载Vgg16的预训练模型，训练时需指定路径
 ## 图像分割综述及总结
 总结近年实例分割和语义分割的进展及各个方案的思考，语言简洁精炼，读者能有很大收获！
+###  模型tinymind地址
+https://www.tinymind.com/qq-25646217/fcn8s/code 欢迎复制模型进行测试
